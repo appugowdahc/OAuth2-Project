@@ -21,7 +21,10 @@ from authentication.urls import urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(urlpatterns)),
-      path('auth/', include('authentication.urls')),  # For your protected endpoints
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),  
+    # path('auth/', include('authentication.urls')),  # For your protected endpoints
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('accounts/', include('allauth.urls')),  # Add this
+    path('auth/', include('dj_rest_auth.urls')),  # API endpoints
+    path('auth/registration/', include('dj_rest_auth.registration.urls')),  
     
 ]

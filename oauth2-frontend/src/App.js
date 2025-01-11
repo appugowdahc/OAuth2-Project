@@ -1,9 +1,9 @@
 import {React ,useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginButton from './LoginButton';
+// import LoginButton from './LoginButton';
 import ProtectedResource from './ProtectedResource';
 import axios from 'axios';
-
+import Login from './pages/Login';
 const Callback = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -37,7 +37,8 @@ const App = () => {
         <Router>
             <Routes>
                 {/* Define your routes here */}
-                <Route path="/" element={<LoginButton />} />
+                <Route path="/" element={<Login />} />
+
                 <Route path="/callback" element={<Callback />} />
                 <Route path="/protected" element={<ProtectedResource />} />
             </Routes>
