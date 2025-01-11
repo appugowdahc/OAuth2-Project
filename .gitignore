@@ -1,2 +1,3 @@
 env/
 oauth2-frontend/node_modules
+oauth2-frontend/src/secret_creds/

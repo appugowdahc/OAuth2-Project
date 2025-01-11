@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "../Data";
+import data from "../secret_creds/Data";
 import { FcGoogle } from "react-icons/fc";
 
 const styles = {
